@@ -1174,11 +1174,58 @@ theoretical optimum scenario, and only 40% in an uncoordinated business-as-usual
   year            = {2025},
   address         = {Rotterdam, The Netherlands},
   month           = {17 Jun.},
+  pages           = {968--972},
   abstract        = {In recent years, deep reinforcement learning (DRL) algorithms have gained traction in home energy management systems. However, their adoption by energy management companies remains lim-
 ited due to the black-box nature of DRL, which fails to provide transparent decision-making feedback. To address this, explainable reinforcement learning (XRL) techniques have emerged, aiming to make DRL decisions more transparent. Among these, soft differential decision tree (DDT) distillation provides a promising approach due to the clear decision rules they are based on, which can be efficiently computed. However, achieving high performance often requires deep, and completely full, trees, which reduces interpretability. To overcome this, we propose a novel asymmetric soft DDT construction method. Unlike traditional soft DDTs, our approach adaptively constructs trees by expanding nodes only when necessary. This improves the efficient use of decision nodes, which require a predetermined depth to construct full symmetric trees, enhancing both interpretability and performance. We demonstrate the potential of asymmetric DDTs to provide transparent, efficient, and high-performing decision-making in home energy management systems.},
   area            = {smartgrid},
+  doi             = {10.1145/3679240.3734671},
   publicationtype = {C1},
   timestamp       = {2025.06.17},
+}
+
+@InProceedings{Madahi2025COBUILD,
+  author          = {Karami Madahi, Seyed Soroush and Gabriele, Giuseppe and Claessens, Bert and Develder, Chris},
+  booktitle       = {Proc. Workshop Comput. Optim. Buildings (CO-BUILD) at ICML 2025},
+  title           = {Scalable Attention-based Reinforcement Learning Method for Multi-asset Control},
+  year            = {2025},
+  address         = {Vancouver, Cananada},
+  month           = {18 Jul.},
+  pages           = {1--8},
+  abstract        = {In this paper, we propose a scalable centralized reinforcement learning method to jointly optimize a fleet of flexible assets. The attention layer in our proposed architecture enables the agent to make decisions for each asset based on both its local and aggregated asset-specific information. As a proof-of-concept, we investigate the performance of the proposed method on an electric vehicle (EV) charging problem. The results show that the trained agent can effectively control multiple EVs to achieve a common objective (load flattening in our case).},
+  area            = {smartgrid},
+  publicationtype = {C1},
+  timestamp       = {2025.07.18},
+  url             = {https://openreview.net/attachment?id=3h0v1Ht73L&name=pdf},
+}
+
+@InProceedings{Pavirani2025EEM,
+  author          = {Pavirani, Fabio and Madahi, Seyed Soroush Karimi and Claessens, Bert and Develder, Chris},
+  booktitle       = {Proc. 21st Int. Conf. European Energy Market (EEM 2025)},
+  title           = {System-Aware Reinforcement Learning for Optimized Implicit Imbalance Participation in Belgium},
+  year            = {2025},
+  address         = {Lisbon, Portugal},
+  month           = {27--29 May},
+  pages           = {1-7},
+  abstract        = {The increasing integration of renewable energy sources into electrical grids has disrupted the balance between production and consumption. To address this challenges, transmission system operators such as the Belgian one have introduced imbalance tariffs that penalize harmful energy deviations. Although the imbalance settlement mechanism allows balance responsible parties to dynamically adjust their energy positions, it also exposes them to significant risks. In fact, Belgian imbalance prices are determined retrospectively at the end of each settlement block, meaning that energy deviations occur under uncertain pricing conditions. Reinforcement learning (RL) offers a promising solution for navigating this uncertainty thanks to its ability to manage stochastic environments and deliver long-term rewards. However, achieving profitable participation in imbalance settlement requires more than just handling price volatility; it also demands a deep understanding of the grid dynamics. This paper examines how enriching an RL agent's observation space with grid-related data can enhance its awareness of system dynamics and improve decision-making. We specifically focus on the agent's performance during unstable periods -- i.e., quarters where last-minute deviations in system imbalance heavily influence prices - by introducing a related metric. Using the soft actor-critic algorithm, we control a simulated battery energy storage system participating in the Belgian imbalance settlement, leveraging historical data spanning three years. Our findings indicate that, compared to a system-agnostic RL agent (i.e., an agent that does not have grid-related values in the observation space), the system-aware agents develop more effective policies, particularly during unstable quarters.},
+  area            = {smartgrid},
+  doi             = {10.1109/EEM64765.2025.11050139},
+  publicationtype = {P1},
+  timestamp       = {2025.05.27},
+}
+
+@InProceedings{Madahi2025EEM,
+  author          = {Karimi Madahi, Seyed Soroush and Pavirani, Fabio and Claessens, Bert and Develder, Chris},
+  booktitle       = {Proc. 21st Int. Conf. European Energy Market (EEM 2025)},
+  title           = {System-Aware Reinforcement Learning for Optimized Implicit Imbalance Participation in Belgium},
+  year            = {2025},
+  address         = {Lisbon, Portugal},
+  month           = {27--29 May},
+  pages           = {1-6},
+  abstract        = {Adopting renewable energy sources (RES) can pave the way toward reaching net-zero carbon emissions. However, the intermittent nature of RES can pose significant challenges to balance responsible parties (BRPs) and transmission system operators (TSOs) in maintaining the balance of the electricity grid. BRPs can assist TSOs in balancing the grid by occasionally deviating from their nomination to help reduce the system imbalance, which is called implicit balancing. In this paper, we propose data-driven implicit balancing strategies for BRPs in the Dutch imbalance settlement mechanism. Dutch implicit balancing is challenging due to the Dutch imbalance pricing calculation, which is a combination of single and dual pricing methods. To cope with this challenge, a risk management perspective is incorporated into the proposed method through distributional reinforcement learning. Distributional reinforcement learning agents are trained to manage a BRP's battery in the presence of wind farm generation stochasticity to reduce its imbalance cost. Dutch imbalance data of 2024 are used to assess the performance of the learned implicit strategies. The proposed method is benchmarked against deterministic model predictive control and a rule-based controller. The results show that both risk-neutral and risk-averse agents improve daily profit by 29.3% and 20.7% respectively, compared to the rule-based controller. Moreover, the risk-averse agent decreases the average portfolio deviation during dual pricing situations by 19.2% compared to the risk-neutral agent, resulting in a lower imbalance cost for the BRP in these situations.},
+  area            = {smartgrid},
+  doi             = {10.1109/EEM64765.2025.11050202},
+  publicationtype = {P1},
+  timestamp       = {2025.05.27},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
