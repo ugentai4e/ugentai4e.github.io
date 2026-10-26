@@ -14,6 +14,17 @@
 
 ===================================================================== */
 
+
+/* ------------------------------------------------------------------ */
+/* Conditional content definitions -- thanks https://medium.com/@efficientHacks/how-to-display-different-content-based-on-screen-width-with-css-only-1e1caca5801
+/* ------------------------------------------------------------------ */
+.mobile-only { display: none; }
+
+@media (max-width: 768px) {
+   .desktop-only { display: none }
+   .mobile-only  { display: inline }
+}
+
 /* ------------------------------------------------------------------ */
 /* a. General Styles
 /* ------------------------------------------------------------------ */
@@ -31,9 +42,15 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   /* background: #161415 url(../images/background/tree.jpg) no-repeat top center; */
-   /* background: #161415 url(../images/background/ferns-unsplash-rotated-cropped-bw.jpg) no-repeat top center; */
-   background: #161415 url(../images/background/ferns-unsplash-rotated-cropped.jpg) no-repeat top center;
+   /* background: #161415 url(../images/background/NewYork-05.jpg) no-repeat top center; */
+   /* background: #161415 url(../images/background/Ghent-09.jpg) no-repeat top center; */
+   /* background: #161415 url(../images/background/sunset-colorful.jpg) no-repeat top center; */
+   background: #161415 url(../images/background/ferns-unsplash-rotated-cropped-dark.jpg) no-repeat top center;
+   /* background: #161415 url(../images/background/branches-with-leaves-blue-sky.jpg) no-repeat top center;*/
+   /* background: #161415 url(../images/background/tree-plenty-of-leaves.jpg) no-repeat top center; */
+   /* background: #161415 url(../images/background/oak-autumn.jpg) no-repeat top center; */
+   /* background: #161415 url(../images/background/branches-with-leaves-blue-sky.jpg) no-repeat top center; */
+   /* background: #161415 url(../images/background/treetops-leaves-diagonal.jpg) no-repeat top center; */
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -60,16 +77,10 @@ header .banner {
 
 header .banner-text { width: 100%; }
 
-header .logo {
-   position: relative;
-   width: 200px;
-   height: 200px;
-}
-
 header .profile-pic {
    position: relative;
-   width: 160px;
-   height: 160px;
+   width: 120px;
+   height: 120px;
    border-radius: 100%;
    box-shadow: 2px 8px 8px 0 rgba(0, 0, 0, .6);
 }
@@ -83,7 +94,7 @@ header .banner-text h1 {
 }
 
 header .banner-text h2 {
-   font: 20px/1.1em 'ugentpannotext_semibold', sans-serif;
+   font: 20px/1.9em 'ugentpannotext_semibold', sans-serif;
    color: #FFF;
    margin: 0 auto;
    width: 70%;
@@ -104,12 +115,12 @@ header .banner-text h2 a:hover {
 
 header .banner-text h3 {
    /* font: 17px/1.9em 'gentium_book_basicbold', serif; */
-   font: 18px/1.4em 'ugentpannotext_semibold', sans-serif;
+   font: 18px/1.5em 'ugentpannotext_semibold', sans-serif;
    /* font: 18px/1.9em 'opensans-bold', sans-serif;
    /* color: #D5D5D5; */
    color: #e9f0fa;
    margin: 0 auto;
-   width: 50%;
+   width: 70%;
    /* text-shadow: 1px 2px 3px rgba(0, 0, 0, .9); */
    text-shadow: 1px 2px 3px rgba(0, 0, 0, .9), 0 0 1em rgba(0, 0, 0, .9);
 }
@@ -251,6 +262,9 @@ ul#nav li.current a { /* color: #1E64C8; */ background: #1E64C8; }
 ul#nav li a:hover, ul#nav li a:focus { background: #e9f0fa; color: #000; }
 
 
+div#intro a, div#intro  a:visited  { color: #fff; }
+div#intro a:hover, div#intro  a:focus { color: #fff; background: #1E64C8; }
+
 /* ------------------------------------------------------------------ */
 /* c. About Section
 /* ------------------------------------------------------------------ */
@@ -306,14 +320,14 @@ ul#nav li a:hover, ul#nav li a:focus { background: #e9f0fa; color: #000; }
 /* x. Talks & Teaching Section
 /* ------------------------------------------------------------------ */
 
-#talks, #teaching, #publications, #staff, #projects {
+#talks, #teaching, #publications, #staff {
    background: #FFF;
    padding-top: 72px;
    padding-bottom: 0px;
    overflow: hidden;
 }
 
-#talks h1, #teaching h1, #publications h1, #staff h1, #projects h1 {
+#talks h1, #teaching h1, #publications h1, #staff h1 {
    text-transform: uppercase;
    margin-bottom: 20px;
    letter-spacing: 1px;
@@ -339,6 +353,14 @@ ul#nav li a:hover, ul#nav li a:focus { background: #e9f0fa; color: #000; }
 #staff .staffentry {
     display: table-cell;
     vertical-align: middle;
+    line-height: 25px;
+    padding-right: 10px;
+    min-width: 60px;
+}
+
+#staff .staffentry-alumni {
+    display: table-cell;
+    vertical-align: top;
     line-height: 25px;
     padding-right: 10px;
     min-width: 60px;
@@ -408,6 +430,10 @@ border-top: 1px dashed #6F71B9;
 border-right: 1px dashed #6F71B9;
 }
 
+#publications .other {
+border-left: 3px solid #E6E8EB;
+}
+
 pubauth, pubeditor {
 }
 
@@ -452,7 +478,7 @@ font-style: italic;
 
 #publications h3.article:before {
    font-family: 'FontAwesome';
-   content: "\f15b";
+   content: "\f15c";  /* fa-file-text -- \f15b is fa-file, without the horizontal lines */
    padding-right: 10px;
    font-size: 40px;
    line-height: 48px;
@@ -533,7 +559,8 @@ font-style: italic;
 }
 .file-links li:first-child { margin-left: 0; }
 
-#talks .file-links, .file-links.alumni {
+/* #talks .file-links, */
+.file-links.alumni {
    display:inline;
    font-size: 12px;
    margin: 12px 0 5px 0;
@@ -574,7 +601,7 @@ font-style: italic;
 
 .pubfiltering .pub-classes.article:before {
    font-family: 'FontAwesome';
-   content: "\f15b";
+   content: "\f15c";  /* fa-file-text -- \f15b is fa-file, without the horizontal lines */
    padding-right: .5em;
 }
 
